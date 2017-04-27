@@ -1,0 +1,9 @@
+public/assets
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/**/*
+config/private.rb
+*.swp
+.sass-cache
+.env

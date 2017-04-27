@@ -1,0 +1,2 @@
+%p
+= @registrations.map { |r| "#{r.person.name} <#{r.person.caseid}@case.edu>" }.join ','

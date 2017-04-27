@@ -1,0 +1,22 @@
+%h2.dink=@mission.title
+%table.span-14
+  %tr
+    %td
+      Begins:
+    %td
+      =date_humanize(@mission.start)
+  %tr
+    %td
+      Ends (approximate):
+    %td
+      =date_humanize(@mission.end)
+
+%br
+%br
+%br
+%br
+
+%h3.dink
+  Assignment Details:
+%div{:align=>"left"}
+  =RedCloth.new(@mission.description).to_html.html_safe

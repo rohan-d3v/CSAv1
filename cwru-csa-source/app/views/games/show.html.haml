@@ -1,0 +1,28 @@
+- content_for :javascripts do
+  = javascript_include_tag 'https://www.google.com/jsapi'
+  :javascript
+    $(function() {
+      $("#scoreboardTime").countdown({since: new Date(#{Time.now.strftime("%Y, %m-1, %d, %H, %M, %S")}), compact:true, format: 'MS'})
+    });
+%div.game-header
+  %div.span-6.prepend-1
+    %h1.dink= @game.short_name
+    %h2.dink (#{@game.to_s(:date_range)})
+  %div.span-14.prepend-1.last
+    #game_graph
+= cache [@game.cache_key, 'show'].join('/') do
+  %div.game
+    %div.span-23.clear{:style=>"margin-top:30px"}
+      - number = 1
+      - prevscore = -1
+      - currentnum = 1
+      - countnum = 1
+      - @game.registrations.sort_by{|x| x.display_score}.reverse_each do |p|
+        - if p.display_score == prevscore
+          - number = currentnum
+        - else
+          - number = currentnum = countnum
+          - prevscore = p.display_score
+        = render 'scoreboard', player: p, number: number
+        - countnum += 1
+

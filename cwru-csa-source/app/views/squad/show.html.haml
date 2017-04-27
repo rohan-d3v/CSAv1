@@ -1,0 +1,22 @@
+%h2.dink=@squad.game.short_name
+%h3.dink=@squad.name + " -- Led by: " + @squad.leader.person.name
+%div.span-14.prepend-4
+  %table
+    %thead
+      %th Member Name
+      %th Hours Survived
+      %th Tags
+      %th Points
+    %tbody
+      -@squad.registrations.each do |r|
+        %tr
+          %td=r.person.name
+          %td=(r.display_time_survived/1.hour).round
+          %td
+            - if r.is_oz? && !r.game.ozs_revealed?
+              0
+            - else
+              = r.tagged.length
+          %td=r.display_score
+%div.clear
+  %h3.dink=link_to "Back to Scoreboard", game_url(@squad.game)

@@ -1,0 +1,42 @@
+%h2.dink
+  Squad List
+Note: Once you join or create a squad, you must remain with that squad for the remainder of the game.
+
+%table
+  %thead
+    %th Squad Name
+    -if @logged_in_registration.squad_id == nil
+      %th Join?
+    %th Squad Members
+    %th Points
+  %tbody
+    /TODO: Make this awful zebra-table logic in CSS
+    - i=0
+    - @squads.each do |s|
+      - i += 1
+      - if i%2 == 1
+        -col = "#FFFFFF"
+      -else
+        -col = "#EFEFEF"
+      %tr{:style=>"background-color:"+col}
+        %td{:rowspan=>2}
+          .dink{:style=>"font-size:1.3em"}=s.name
+        - if @logged_in_registration.squad_id == nil
+          -if s.can_be_joined?
+            %td{:rowspan=>2}=link_to "Join", join_squad_url(@logged_in_registration.id, s.id), :confirm=>"Are you sure you wish to join this squad?"
+          -else
+            %td{:rowspan=>2} Squad Full!
+        %td
+          %b Leader:
+          =s.leader.person.name if s.leader
+        %td{:rowspan=>2}=s.points()
+      %tr{:style=>"background-color:"+col}
+        %td
+          %b Members:
+          =s.registrations.map{|x| x.try(:person).try(:name) || '[An Unknown Player]' }.join(", ")
+-if @logged_in_registration.squad == nil
+  %h2.dink 
+    Create a New Squad
+  =form_tag( join_squad_url(@logged_in_registration, "new") ) do
+    =text_field_tag("new_squad_name")
+    =submit_tag("Create and Join Squad!")

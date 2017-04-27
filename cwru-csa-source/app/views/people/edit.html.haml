@@ -1,0 +1,29 @@
+- if params[:next] == 'registration'
+  %h2.dink
+    = @current_game.short_name + " Registration (Step 1 of 3)"
+%div.span-4.clear
+  &nbsp;
+%div.span-16
+  %table
+    %tbody
+      = form_for(@toedit, url: person_path(@toedit, next: params[:next])) do |f|
+        %tr
+          %td
+            %b Name:
+          %td= f.text_field :name
+        %tr
+          %td
+            %b CaseID:
+          %td= @toedit.caseid
+        %tr
+          %td
+            %b Phone Number (for SMS)*:
+          %td= f.text_field :phone
+        -if @is_admin
+          %tr
+            %td.admin
+              %b Is Admin?
+            %td=f.check_box :is_admin
+        %tr
+          %td{:colspan=>2}
+            = f.submit

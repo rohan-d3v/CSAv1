@@ -1,0 +1,51 @@
+- unless flash[:notice].nil?
+  %div.notice=flash[:notice]
+%div.span-7
+  %table
+    %thead
+      %th.admin
+        ="Course Faculty"
+    %tbody
+      - unless @admins.nil?
+        - @admins.each do |a|
+          %tr
+            %td
+              =a.name
+  %table
+    %thead
+      %th{:colspan => 2}
+        Glitches and Bugs:
+    %tbody
+      %tr
+        %td E-mail:
+        %td
+          = mail_to "rxr353@case.edu"
+      %tr
+%div.span-15.last
+  %table
+    %thead
+      %th{:colspan=>2} Contact Course Faculty
+    %tbody
+      %tr
+        %td{:colspan=>2}
+          Please detail your problem here. 
+          If you would like a reply, please leave your name so one of our faculty can get back to you
+      =form_for(@contact_message) do |j|
+        %tr
+          %td= j.label :from, "Name / Case ID (optional): "
+          %td= j.text_field :from
+        %tr
+          %td= j.label :body, "Problem: "
+          %td= j.text_area :body
+        %tr
+          %td= j.label :occurred, "Date & Time: "
+          %td= j.datetime_select :occurred
+        %tr
+          %td
+            &nbsp;
+          %td=j.submit "Submit Comment"
+  %b
+
+
+
+

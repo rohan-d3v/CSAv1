@@ -1,0 +1,28 @@
+%table
+  %thead
+    %th{:colspan=>2} Edit Mission!
+  %tbody
+    =form_for(@mission) do |f|
+      %tr
+        %td
+          %b=f.label :title, "Title:"
+        %td=f.text_field :title
+      %tr
+        %td 
+          %b=f.label :start, "Assignment Start Time:"
+        %td=f.datetime_select :start
+      %tr
+        %td
+          %b=f.label :end, "Assignment End Time:"
+        %td=f.datetime_select :end
+      %tr
+      %tr
+        %td
+          %b 
+            =f.label :description, "Problem"
+            (uses
+            %a{:href=>"http://www.textism.com/tools/textile/"} textile
+            )
+        %td=f.text_area :description
+      %tr
+        %td{:colspan=>2}=f.submit, "Update"

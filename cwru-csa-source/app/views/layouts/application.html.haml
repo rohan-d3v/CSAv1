@@ -1,0 +1,118 @@
+!!!
+%html
+  %head
+    %title CSA0.9.5
+    = stylesheet_link_tag 'application'
+    = csrf_meta_tag
+    :javascript
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-28082792-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    :css
+      .dropbtn {
+          background-color: #87cefa;
+          color: black;
+          width:200px;
+          height: 30px;
+          margin: 0px 17px;
+          font-size: 12px;
+          border: none;
+          cursor: pointer;
+      }
+      
+      .dropdown {
+          position: relative;
+          display: inline-block;
+      }
+      
+      .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+      }
+      
+      .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+      }
+      
+      .dropdown-content a:hover {background-color: #f1f1f1}
+      
+      .dropdown:hover .dropdown-content {
+          display: block;
+      }
+      
+      .dropdown:hover .dropbtn {
+          background-color: #87cefa;
+      }  
+  %body
+    .container
+      .heading
+        %h1 Comprehensive Student Aide
+        .headinfo.last
+          .span-5{style: "width: 190px; height: 40px;"}
+          .span-6.log
+            - if @logged_in_person.present?
+              = render 'index/userloggedin'
+            - else
+              = link_to 'Login', people_login_url
+     
+      .dropdown
+        %button.dropbtn 
+          Student
+          .dropdown-content
+            %a{:href => root_url} Home
+            %a{:href => game_url(@current_game)} Directory
+            %a{:href => missions_url} Assignments
+            %a{:href => reservation_url} Reservations
+            %a{:href => rules_game_url(@current_game)} Syllabus
+      .dropdown
+        %button.dropbtn
+          Webapps
+          .dropdown-content
+            %a{:href => claim_bonus_code_url} Webchat
+            %a{:href => calculator_url} Calculator
+            %a{:href => notes_url} Notes
+            %a{:href => practice_url} Practice
+            %a{:href => forum_url} Forum
+      - if @is_admin
+        .dropdown
+          %button.dropbtn
+            Administrator
+            .dropdown-content
+              %a{:href => games_url} Manage Courses
+              %a{:href => tools_game_path(Game.current)} Course Tools
+              %a{:href => registrations_url} Manage Students
+              %a{:href => list_missions_url} Manage Assignments
+              %a{:href => list_contact_messages_url} View Messages
+      .dropdown
+        %button.dropbtn
+          %a{:href => new_contact_message_url} Contact Admins
+      .content
+        - unless flash[:message].nil?
+          .info=flash[:message]
+        - unless flash[:error].nil?
+          .error=flash[:error]
+        = yield
+      
+      .footer.span-24.last
+        Copyright rxr353, emf65, anr41,  avb27. For Questions:
+        = link_to("contact page", new_contact_message_url()) + "."
+    = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js'
+    = javascript_include_tag '//code.jquery.com/jquery-1.11.0.min.js'
+    = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone-min.js'
+    = javascript_include_tag 'application'
+    = yield :javascripts
+
+

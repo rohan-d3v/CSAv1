@@ -1,0 +1,26 @@
+%h2.dink Register by Case ID
+=form_for admin_register_game_url(@game, :method => 'POST') do
+  %table
+    %thead
+      %th{ :colspan => 2} Case ID
+    %tbody
+      %tr
+        %td
+          %label Case ID
+        %td= text_field_tag 'person[caseid]', ''
+  %table
+    %thead
+      %th{ :colspan => 2 } Person Details
+    %tbody
+      %tr
+        %td
+          %label Full Name
+        %td= text_field_tag 'person[name]', ''
+      %tr
+        %td
+          %label Cell Phone Number
+        %td= text_field_tag 'person[phone]', ''
+      %tr
+        %td=collection_select :registration, :squad_id, @squads, :id, :name, {:include_blank => true}
+  =submit_tag "Register"
+
