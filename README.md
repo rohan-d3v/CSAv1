@@ -2,7 +2,13 @@ CSA v1.0.0
 
 For auto generated Documentation for auto rails lib generation refer: doc/app
 
-Thank you to Aaron Neyer for help with database Implementation. 
+Thank you to Aaron Neyer for help with understanding rails database backend Implementation. 
+He was my senior and I have worked with him in the past to implement rails front end applications
+
+UI, Calculator, Notes: Elizabeth 
+Backend, webchat, admin features, login/user access: Rohan
+Forum: Sasha
+Amazon Alexa App: Ashley
 
 Usage instructions
  1) Yigit (yxk38) now has access to admin functions, all buttons should be available.
@@ -13,6 +19,25 @@ Usage instructions
  	- You can then edit Andy's profile to make into admin if needed
  3) All buttons are now functional. All features will be available to the admin
  4) The admin has to register him/herself before the webchat is accessible
+ 5) Student/Common Buttons available
+  - Home: index
+  - Directory: Names with auto email on button click
+  - Assignments: View all Assignments
+  - Reservations: On button click to ksl student reservation system. KSL security does not allow reservation using embed
+  - Syllabus: View syllabus as posted by teacher/faculty
+ 6) Webapps available
+  - Webchat: Coded from scratch using php and html. refer public/chat
+  - Calculator: Coded from scratch: Elizabeth. Refer public/calculator
+  - Notes: Coded from Scratch: Elizabeth. Refer public/notes
+  - Forum: Coded from scratch: Sasha. Refer Sasha's repo
+  - Practice: Coded from scratch: Ashley. Refer Ashley's Repo
+ 7) Administrator Buttons available
+  - Manage Courses: Manage Courses including Range/ start to End. Currently Ssupports a 20 day max
+  - Manage Students: Manage registered students. Please register yourself to use the webchat
+  - Course Tools: Mass emails
+  - Manage Assignments: Manage all assignments, including delete
+  - View Messages: View messages frorm contact admins page
+ 8) Contact Admins
 
 If you would like to deploy your own copy: 
 Please note that this is deployment as far as I remember
