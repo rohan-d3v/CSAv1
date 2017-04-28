@@ -6,7 +6,7 @@ Thank you to Aaron Neyer for help with understanding rails database backend Impl
 He was my senior and I have worked with him in the past to implement rails front end applications
 
 UI, Calculator, Notes: Elizabeth 
-Backend, webchat, admin features, login/user access: Rohan
+Backend, admin features, login/user access: Rohan
 Forum: Sasha
 Amazon Alexa App: Ashley
 
@@ -39,9 +39,10 @@ Usage instructions
   - View Messages: View messages frorm contact admins page
  8) Contact Admins
 
-If you would like to deploy your own copy: 
-Please note that this is deployment as far as I remember
-it might be different, if you run into errors, email me at rxr353@case.edu and I will get backk to you ASAP
+<b>To deploy your own copy follow instructions below </b>
+-Please note this is purely from memory, 
+-The actual file changes are accurate but dependencies might not be met
+-Sorry! If you run into errors, pleasse email me: rxr353@case.edu
 
  1) Install apache2
  2) Install php5 in apache2
@@ -51,7 +52,8 @@ it might be different, if you run into errors, email me at rxr353@case.edu and I
  6) Git clone this repo to /var/www/
  7) sudo nano /etc/apache2/apache2.conf
    - Insert this after directory </var/www>
-   -    # Tell Apache and Passenger where your app's 'public' directo$
+   -    
+   # Tell Apache and Passenger where your app's 'public' directory is
     DocumentRoot /var/www/cwru-csa-source/public
 
     PassengerRuby /home/rohan/.rvm/gems/ruby-2.0.0-p648/wrappers/ruby
@@ -85,7 +87,6 @@ it might be different, if you run into errors, email me at rxr353@case.edu and I
 8) cd sites-enabled
 9) sudo nano 000-default.conf
  -Copy paste this and replace the .conf content
-
  <VirtualHost *:80>
         # The ServerName directive sets the request scheme, hostname and port that
         # the server uses to identify itself. This is used when creating
@@ -120,9 +121,6 @@ it might be different, if you run into errors, email me at rxr353@case.edu and I
         # after it has been globally disabled with "a2disconf".
         #Include conf-available/serve-cgi-bin.conf
 </VirtualHost>
-
-# vim: syntax=apache ts=4 sw=4 sts=4 sr noet
- 
  10) sudo apache2ctl -k graceful
  11) cd /var/www/cwru-csa-source
  12) bundle install 
