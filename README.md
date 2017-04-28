@@ -5,10 +5,13 @@ For auto generated Documentation for auto rails lib generation refer: doc/app
 Thank you to Aaron Neyer for help with understanding rails database backend Implementation. 
 He was my senior and I have worked with him in the past to implement rails front end applications
 
-UI, Calculator, Notes: Elizabeth 
-Backend, admin features, login/user access, Webchat: Rohan
-Forum: Sasha
-Amazon Alexa App: Ashley
+- Front End/UI, client side integration: Elizabeth 
+- Server Interface/Backend, admin features, login/user access: Rohan
+
+- Calculator, Notes: Elizabeth
+- Webchat: Rohan
+- Forum: Sasha
+- Amazon Alexa App: Ashley
 
 Usage instructions
  1) Yigit (yxk38) now has access to admin functions, all buttons should be available.
