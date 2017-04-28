@@ -90,7 +90,7 @@ Usage instructions
 8) cd sites-enabled
 9) sudo nano 000-default.conf
  -Copy paste this and replace the .conf content
- <VirtualHost *:80>
+  <VirtualHost *:80>
         # The ServerName directive sets the request scheme, hostname and port that
         # the server uses to identify itself. This is used when creating
         # redirection URLs. In the context of virtual hosts, the ServerName
