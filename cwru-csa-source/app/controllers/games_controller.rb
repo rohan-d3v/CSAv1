@@ -14,35 +14,10 @@ class GamesController < ApplicationController
     # Don't send new HTML if the content is cached on the client:
     return if !stale?(@game) && !Rails.env.development?
 
-    @graphdata = Rails.cache.fetch([@game.cache_key, 'graphdata']) { @game.graph_data }
-
-    @game = Game.where(id: params[:id]).
-      includes(squads: :registrations, registrations: [
-        :taggedby, :tagged, :feeds, :game, :person, :infractions,
-        :missions, :bonus_codes,
-      ]).first
-    @squads = @game.squads.select { |x| x.registrations.length >= 2 }.
-                sort_by(&:points).reverse.first(5)
   end
 
   def rules
     @game = Game.find(params[:id]) || @current_game
-  end
-
-  def tree
-    @game = Game.find(params[:id]) || @current_game
-
-        if !@game.ozs_revealed?
-          flash[:error] = "Original Zombies have not been revealed yet. No peeking at the tree!"
-          redirect_to :root
-        end
-  end
-
-  def heatmap
-    @tags = Game.find(params[:id]).tags.sort_by { |x| x.latitude || 0 }
-    if params[:tagger_id].present?
-      @tags = @tags.select{|tag| tag.tagger_id == params[:tagger_id].to_i}
-    end
   end
 
   def new
@@ -100,31 +75,6 @@ class GamesController < ApplicationController
     @registrations = @registrations.includes(:person)
   end
 
-  def text
-    @game = Game.find(params[:id])
-  end
-
-  def text_create
-    @game = Game.find(params[:id])
-    @registrations = @game.registrations
-    if params[:faction_id].present?
-      @registrations = @registrations.where(faction_id: params[:faction_id])
-    end
-
-    if params[:human_type].present?
-      @registrations = @registrations.where(human_type: params[:human_type])
-    end
-
-    if params[:mission].present?
-      @registrations = @registrations.joins(:missions).where(attendances: { mission_id: params[:mission] })
-    end
-    @registrations = @registrations.includes(:person)
-    messages = @registrations.map { |r| [r.person, params[:message]] }
-    flash[:message] = "Sent messages to #{@registrations.count} players"
-    Delayed::Job.enqueue SendNotification.new(messages)
-    redirect_to text_game_path(@game.id)
-  end
-
   def admin_register_new
     @game = Game.find(params[:id])
     @squads = @game.squads
@@ -139,11 +89,6 @@ class GamesController < ApplicationController
     return redirect_to(admin_register_game_url(@game), :flash => { :error => 'You need to input a name for the person.' }) if !@person.name.present?
     return redirect_to(admin_register_game_url(@game), :flash => { :error => "Could not create or find person! #{@person.errors.full_messages.first}" }) if !@person.save
 
-    @registration = Registration.where(:person_id => @person.id, :game_id => @game.id).first_or_initialize(
-      :wants_oz => params[:registration][:wants_oz],
-      :is_off_campus => params[:registration][:is_off_campus],
-    )
-
     if @registration.persisted?
       flash[:error] = 'User is already registered for this game!'
       redirect_to admin_register_game_url(@game)
@@ -152,7 +97,6 @@ class GamesController < ApplicationController
       @registration.score = 0
 
       if @registration.save(:validate => false)
-        @registration.update_attribute(:squad_id, params[:registration][:squad_id]) if params[:registration][:squad_id].present?
       else
         flash[:error] = 'Could not register due to an error!'
         redirect_to admin_register_game_url(@game)

@@ -11,7 +11,7 @@ class ContactMessagesController < ApplicationController
     @new.game = @current_game
 
     if @new.save
-      flash[:notice] = "Thank you for your feedback. An administrator will read your message shortly and we will take appropriate action."
+      flash[:notice] = "Someone appropriate will get back to you in a timely manner"
       redirect_to new_contact_message_url
     else
       flash[:error] = @new.errors.full_messages.first

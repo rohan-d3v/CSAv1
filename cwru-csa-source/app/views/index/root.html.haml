@@ -7,14 +7,4 @@
 %div.span-16.gameinfo
   %h2.dink Course Updates
   =RedCloth.new(@current_game.information).to_html.html_safe
-%div.span-5.last.quickstats
-  %h2.dink 
-    Course Dates
-  %ul
-    %li Drop/Add Date begins
-    = @current_game.registration_begins
-    %li Drop/Add Date ends
-    = @current_game.registration_ends
-    %li Withdrawal Date
-    = @current_game.oz_reveal
 

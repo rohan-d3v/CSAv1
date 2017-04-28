@@ -1,5 +1,4 @@
 class Game < ActiveRecord::Base
-  require './lib/game_validator.rb' # A better way??
   has_many :registrations
   has_many :tags
   has_many :missions
@@ -8,7 +7,6 @@ class Game < ActiveRecord::Base
   has_many :squads
   has_many :ozs, :class_name => 'Registration', :conditions => ['is_oz = ?', true]
   has_many :bonus_codes
-  validates_with GameValidator  # Defined in ./lib/game_validator.rb
 
   def self.current
     Game.where(is_current: true).first or Game.new

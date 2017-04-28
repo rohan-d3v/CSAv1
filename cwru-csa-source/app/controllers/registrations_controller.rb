@@ -1,5 +1,5 @@
 class RegistrationsController < ApplicationController
-  before_filter :check_admin, :only => [:index, :destroy, :submit_waiver, :showwaiver, :find_by_code]
+  before_filter :check_admin, :only => [:index, :destroy]
   before_filter :check_login, :only => [:new, :create, :show]
   before_filter :check_is_registered, :only => [:joinsquad]
 
@@ -16,26 +16,11 @@ class RegistrationsController < ApplicationController
     end
   end
 
-  def create
-    @registration = Registration.
-      where(person_id: @person, game_id: @current_game).
-      first_or_initialize(params[:registration])
-    @registration.score = 0
-    @registration.squad = nil unless params[:squad_select] == "existing"
+  def destroy
+    @registration = Registration.find(params[:id])
+    @registration.destroy if @registration
 
-    @registration.human_type = 'Resistance'
-
-    if !@registration.save
-      flash[:error] = "Error, could not register you! #{@registration.errors.full_messages.first}"
-      return redirect_to new_registration_url
-    end
-
-    if @registration.person.phone.present?
-      Delayed::Job.enqueue SendNotification.new(@person,
-        "Thank you for registering for this course.")
-    end
-
-    redirect_to registration_url(@registration)
+    redirect_to registrations_url
   end
 
   def destroy
@@ -70,7 +55,6 @@ class RegistrationsController < ApplicationController
 
   def edit
     @registration = Registration.find(params[:id])
-    @squads = @current_game.squads.sort_by { |x| x.name } #todo: arel this
     @person = @registration.person
 
     if !@is_admin && @person != @logged_in_person
@@ -78,6 +62,7 @@ class RegistrationsController < ApplicationController
       return redirect_to root_url
     end
   end
+
 
   def index
     @registrations = Registration.where(game_id: @current_game)

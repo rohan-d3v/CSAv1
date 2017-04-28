@@ -20,7 +20,8 @@
         %td
           %label Cell Phone Number
         %td= text_field_tag 'person[phone]', ''
-      %tr
-        %td=collection_select :registration, :squad_id, @squads, :id, :name, {:include_blank => true}
+  %p (note: Person Details will be ignored if the Case ID is already in the system)
+  %table
+    %tr
+      %td=collection_select :registration, :squad_id, @squads, :id, :name, {:include_blank => true}
   =submit_tag "Register"
-

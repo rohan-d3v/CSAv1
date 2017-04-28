@@ -11,19 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140325043306) do
-
-
-  create_table "bonus_codes", :force => true do |t|
-    t.string   "code"
-    t.integer  "points"
-    t.integer  "game_id"
-    t.integer  "registration_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-
+ActiveRecord::Schema.define(:version => 20170427043306) do
   create_table "contact_messages", :force => true do |t|
     t.string   "from"
     t.string   "regarding"
@@ -52,19 +40,8 @@ ActiveRecord::Schema.define(:version => 20140325043306) do
 
   add_index "delayed_jobs", ["priority", "run_at"], :name => "delayed_jobs_priority"
 
-  create_table "feeds", :force => true do |t|
-    t.integer  "registration_id"
-    t.datetime "datetime"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "tag_id"
-    t.integer  "mission_id"
-  end
-
   create_table "games", :force => true do |t|
     t.string   "short_name"
-    t.datetime "registration_begins"
-    t.datetime "registration_ends"
     t.datetime "game_begins"
     t.datetime "game_ends"
     t.datetime "created_at"
@@ -73,7 +50,6 @@ ActiveRecord::Schema.define(:version => 20140325043306) do
     t.text     "information",         :default => "No information given."
     t.text     "rules",               :default => "No rules have been posted yet. Check back later!"
     t.string   "time_zone",           :default => "Eastern Time (US & Canada)"
-    t.datetime "oz_reveal"
   end
 
   create_table "missions", :force => true do |t|
@@ -81,11 +57,9 @@ ActiveRecord::Schema.define(:version => 20140325043306) do
     t.datetime "start"
     t.datetime "end"
     t.text     "description"
-    t.integer  "winning_faction_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "title"
-    t.text     "storyline"
   end
 
   create_table "people", :force => true do |t|
@@ -100,18 +74,16 @@ ActiveRecord::Schema.define(:version => 20140325043306) do
     t.date     "date_of_birth"
   end
 
+
   create_table "registrations", :force => true do |t|
     t.integer  "person_id"
     t.integer  "game_id"
     t.integer  "faction_id"
     t.string   "card_code"
     t.integer  "score"
-    t.boolean  "is_oz",         :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "wants_oz",      :default => false
-    t.boolean  "is_off_campus", :default => false
-    t.integer  "squad_id"
-    t.string   "human_type"
+    t.string   "human_type" #Briefly forgot the word user...
   end
- end
+
+end

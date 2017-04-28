@@ -25,5 +25,6 @@
           %td{style: "text-align:center"}=link_to("Unregister", registration_url(r), class: "admin", method: :delete, confirm: "Are you sure you wish to delete this registration?")
 - else
   No Students registered!
-  %br
-  Quick! Do more advertising!
+  = link_to "Register Someone By Case ID", admin_register_game_url(@current_game)
+
+

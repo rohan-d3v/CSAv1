@@ -7,4 +7,4 @@ require './lib/achievement_registry.rb'
 require 'google_chart'
 
 # Initialize the rails application
-Hvz::Application.initialize!
+CSA::Application.initialize!

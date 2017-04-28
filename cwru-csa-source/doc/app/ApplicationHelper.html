@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>module ApplicationHelper - Rails Application Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="module">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/helpers/application_helper.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-date_humanize">#date_humanize</a>
+    
+    <li><a href="#method-i-date_humanize_dayofweek_and_time">#date_humanize_dayofweek_and_time</a>
+    
+    <li><a href="#method-i-gravatar_profile_url">#gravatar_profile_url</a>
+    
+    <li><a href="#method-i-profile_photo_url">#profile_photo_url</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Achievement.html">Achievement</a>
+  
+    <li><a href="./Achievement/AdminTakedown.html">Achievement::AdminTakedown</a>
+  
+    <li><a href="./Achievement/DoubleKill.html">Achievement::DoubleKill</a>
+  
+    <li><a href="./AchievementDoubleKill.html">AchievementDoubleKill</a>
+  
+    <li><a href="./AchievementManager.html">AchievementManager</a>
+  
+    <li><a href="./AchievementRegistry.html">AchievementRegistry</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./CalculatorController.html">CalculatorController</a>
+  
+    <li><a href="./ChatController.html">ChatController</a>
+  
+    <li><a href="./ContactMessage.html">ContactMessage</a>
+  
+    <li><a href="./ContactMessagesController.html">ContactMessagesController</a>
+  
+    <li><a href="./ContactMessagesHelper.html">ContactMessagesHelper</a>
+  
+    <li><a href="./ForumController.html">ForumController</a>
+  
+    <li><a href="./Game.html">Game</a>
+  
+    <li><a href="./GamesController.html">GamesController</a>
+  
+    <li><a href="./GamesHelper.html">GamesHelper</a>
+  
+    <li><a href="./IndexController.html">IndexController</a>
+  
+    <li><a href="./IndexHelper.html">IndexHelper</a>
+  
+    <li><a href="./Mission.html">Mission</a>
+  
+    <li><a href="./MissionsController.html">MissionsController</a>
+  
+    <li><a href="./MissionsHelper.html">MissionsHelper</a>
+  
+    <li><a href="./NotesController.html">NotesController</a>
+  
+    <li><a href="./PeopleController.html">PeopleController</a>
+  
+    <li><a href="./PeopleHelper.html">PeopleHelper</a>
+  
+    <li><a href="./Person.html">Person</a>
+  
+    <li><a href="./PracticeController.html">PracticeController</a>
+  
+    <li><a href="./Registration.html">Registration</a>
+  
+    <li><a href="./RegistrationsController.html">RegistrationsController</a>
+  
+    <li><a href="./RegistrationsHelper.html">RegistrationsHelper</a>
+  
+    <li><a href="./ReservationController.html">ReservationController</a>
+  
+    <li><a href="./SendNotification.html">SendNotification</a>
+  
+    <li><a href="./Squad.html">Squad</a>
+  
+    <li><a href="./SquadHelper.html">SquadHelper</a>
+  
+    <li><a href="./UpdateGameState.html">UpdateGameState</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="module">module ApplicationHelper</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-date_humanize" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">date_humanize</span><span
+            class="method-args">(date)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="date_humanize-source">
+            <pre><span class="ruby-comment"># File app/helpers/application_helper.rb, line 2</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">date_humanize</span>(<span class="ruby-identifier">date</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">date</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-string">&quot;%A, %B %e, %Y @ %I:%M %p&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- date_humanize-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- date_humanize-method -->
+
+    
+      <div id="method-i-date_humanize_dayofweek_and_time" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">date_humanize_dayofweek_and_time</span><span
+            class="method-args">(date)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="date_humanize_dayofweek_and_time-source">
+            <pre><span class="ruby-comment"># File app/helpers/application_helper.rb, line 6</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">date_humanize_dayofweek_and_time</span>(<span class="ruby-identifier">date</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">date</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-string">&quot;%A, %I:%M %p&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- date_humanize_dayofweek_and_time-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- date_humanize_dayofweek_and_time-method -->
+
+    
+      <div id="method-i-gravatar_profile_url" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">gravatar_profile_url</span><span
+            class="method-args">(person)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="gravatar_profile_url-source">
+            <pre><span class="ruby-comment"># File app/helpers/application_helper.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">gravatar_profile_url</span>(<span class="ruby-identifier">person</span>)
+  [<span class="ruby-string">&quot;http://www.gravatar.com/&quot;</span>,
+    <span class="ruby-constant">Digest</span><span class="ruby-operator">::</span><span class="ruby-constant">MD5</span>.<span class="ruby-identifier">hexdigest</span>(<span class="ruby-identifier">person</span>.<span class="ruby-identifier">caseid</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;@case.edu&#39;</span>),
+  ].<span class="ruby-identifier">join</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- gravatar_profile_url-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- gravatar_profile_url-method -->
+
+    
+      <div id="method-i-profile_photo_url" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">profile_photo_url</span><span
+            class="method-args">(person, size=32, default=image_path('http://casehvz.com/assets/gravatar_default.png'))</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="profile_photo_url-source">
+            <pre><span class="ruby-comment"># File app/helpers/application_helper.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">profile_photo_url</span>(<span class="ruby-identifier">person</span>, <span class="ruby-identifier">size</span>=<span class="ruby-value">32</span>, <span class="ruby-identifier">default</span>=<span class="ruby-identifier">image_path</span>(<span class="ruby-string">&#39;http://casehvz.com/assets/gravatar_default.png&#39;</span>))
+  [<span class="ruby-string">&quot;http://www.gravatar.com/avatar/&quot;</span>,
+    <span class="ruby-constant">Digest</span><span class="ruby-operator">::</span><span class="ruby-constant">MD5</span>.<span class="ruby-identifier">hexdigest</span>(<span class="ruby-identifier">person</span>.<span class="ruby-identifier">caseid</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;@case.edu&#39;</span>),
+    <span class="ruby-node">&quot;?s=#{size}&amp;d=#{u default}&quot;</span>
+  ].<span class="ruby-identifier">join</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- profile_photo_url-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- profile_photo_url-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

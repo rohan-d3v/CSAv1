@@ -11,7 +11,7 @@ Bundler.require *Rails.groups(:assets => %w(development test))
 
 ActiveRecord::Base.include_root_in_json = false
 
-module Hvz
+module CSA
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers

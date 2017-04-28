@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %title CSA0.9.5
+    %title CSA1.0.0
     = stylesheet_link_tag 'application'
     = csrf_meta_tag
     :javascript
@@ -17,7 +17,7 @@
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     :css
       .dropbtn {
-          background-color: #87cefa;
+          background-color: #A9A9A9;
           color: black;
           width:200px;
           height: 30px;
@@ -54,11 +54,12 @@
       }
       
       .dropdown:hover .dropbtn {
-          background-color: #87cefa;
+          background-color: #C0C0C0;
       }  
   %body
     .container
       .heading
+        .logo=image_tag("logo_small.png")
         %h1 Comprehensive Student Aide
         .headinfo.last
           .span-5{style: "width: 190px; height: 40px;"}
@@ -81,7 +82,7 @@
         %button.dropbtn
           Webapps
           .dropdown-content
-            %a{:href => claim_bonus_code_url} Webchat
+            %a{:href => chat_url} Webchat
             %a{:href => calculator_url} Calculator
             %a{:href => notes_url} Notes
             %a{:href => practice_url} Practice

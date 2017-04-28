@@ -1,19 +1,17 @@
-Hvz::Application.routes.draw do
+CSA::Application.routes.draw do
   get "forum/index", :as => "forum"
   get "notes/index", :as => "notes"
   get "calculator/index", :as => "calculator"
   get "reservation/index", :as => "reservation"
   get "practice/index", :as => "practice"
+  get "chat/index", :as => "chat"
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
   	match "/people/login/" => "people#login"
   	match "/people/logout/" => "people#logout"
 	resources :people, :tags, :feeds
-	resources :attendances
-  get "bonus_codes/claim" => "bonus_codes#claim", :as => "claim_bonus_code"
-  put "bonus_codes/claim" => "bonus_codes#claim_submit", :as => "submit_bonus_code"
-  resources :bonus_codes
   resources :missions, :id => /[0-9]*/ do
     collection do
       get :autocomplete_person_name
@@ -31,10 +29,7 @@ Hvz::Application.routes.draw do
       get 'showwaiver'
 		resources :infractions
 	end
-  match '/players/find_by_code/' => 'registrations#find_by_code', :as => 'find_registration_by_code', :via => 'get'
-  get 'players/:id/waiver' => "waiver#new", :as => "sign_waiver"
-  post 'players/:id/waiver' => "waiver#create", :as => "waivers"
-
+ 
   resources :games do
     collection do
       post 'update_current'
@@ -59,10 +54,6 @@ Hvz::Application.routes.draw do
 			get :list
 		end
 	end
-
-  match "squads/:id" => "squad#show", :as=> "squad"
-  match "squads" => "squad#index", :as=> "squads"
-  match "players/:id/joinsquad/:squadid" => "registrations#joinsquad", :as => "join_squad"
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>class Person - Rails Application Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/models/person.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">ActiveRecord::Base
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-3D-3D">#==</a>
+    
+    <li><a href="#method-i-can_change_name-3F">#can_change_name?</a>
+    
+    <li><a href="#method-i-can_edit-3F">#can_edit?</a>
+    
+    <li><a href="#method-i-legal_to_sign_waiver-3F">#legal_to_sign_waiver?</a>
+    
+    <li><a href="#method-i-phone-3D">#phone=</a>
+    
+    <li><a href="#method-i-signed_waiver-3F">#signed_waiver?</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Achievement.html">Achievement</a>
+  
+    <li><a href="./Achievement/AdminTakedown.html">Achievement::AdminTakedown</a>
+  
+    <li><a href="./Achievement/DoubleKill.html">Achievement::DoubleKill</a>
+  
+    <li><a href="./AchievementDoubleKill.html">AchievementDoubleKill</a>
+  
+    <li><a href="./AchievementManager.html">AchievementManager</a>
+  
+    <li><a href="./AchievementRegistry.html">AchievementRegistry</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./CalculatorController.html">CalculatorController</a>
+  
+    <li><a href="./ChatController.html">ChatController</a>
+  
+    <li><a href="./ContactMessage.html">ContactMessage</a>
+  
+    <li><a href="./ContactMessagesController.html">ContactMessagesController</a>
+  
+    <li><a href="./ContactMessagesHelper.html">ContactMessagesHelper</a>
+  
+    <li><a href="./ForumController.html">ForumController</a>
+  
+    <li><a href="./Game.html">Game</a>
+  
+    <li><a href="./GamesController.html">GamesController</a>
+  
+    <li><a href="./GamesHelper.html">GamesHelper</a>
+  
+    <li><a href="./IndexController.html">IndexController</a>
+  
+    <li><a href="./IndexHelper.html">IndexHelper</a>
+  
+    <li><a href="./Mission.html">Mission</a>
+  
+    <li><a href="./MissionsController.html">MissionsController</a>
+  
+    <li><a href="./MissionsHelper.html">MissionsHelper</a>
+  
+    <li><a href="./NotesController.html">NotesController</a>
+  
+    <li><a href="./PeopleController.html">PeopleController</a>
+  
+    <li><a href="./PeopleHelper.html">PeopleHelper</a>
+  
+    <li><a href="./Person.html">Person</a>
+  
+    <li><a href="./PracticeController.html">PracticeController</a>
+  
+    <li><a href="./Registration.html">Registration</a>
+  
+    <li><a href="./RegistrationsController.html">RegistrationsController</a>
+  
+    <li><a href="./RegistrationsHelper.html">RegistrationsHelper</a>
+  
+    <li><a href="./ReservationController.html">ReservationController</a>
+  
+    <li><a href="./SendNotification.html">SendNotification</a>
+  
+    <li><a href="./Squad.html">Squad</a>
+  
+    <li><a href="./SquadHelper.html">SquadHelper</a>
+  
+    <li><a href="./UpdateGameState.html">UpdateGameState</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Person</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-3D-3D" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">==</span><span
+            class="method-args">(other)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="3D-3D-source">
+            <pre><span class="ruby-comment"># File app/models/person.rb, line 13</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">==</span>(<span class="ruby-identifier">other</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Person</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">caseid</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">caseid</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 3D-3D-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 3D-3D-method -->
+
+    
+      <div id="method-i-can_change_name-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">can_change_name?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="can_change_name-3F-source">
+            <pre><span class="ruby-comment"># File app/models/person.rb, line 22</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">can_change_name?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">is_admin</span>
+
+  <span class="ruby-identifier">current_game</span> = <span class="ruby-constant">Game</span>.<span class="ruby-identifier">current</span>
+  <span class="ruby-identifier">current_registration</span> = <span class="ruby-identifier">registrations</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">:game_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">current_game</span>.<span class="ruby-identifier">id</span>).<span class="ruby-identifier">first</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">current_registration</span>.<span class="ruby-identifier">blank?</span> <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-identifier">current_game</span>.<span class="ruby-identifier">has_begun?</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- can_change_name-3F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- can_change_name-3F-method -->
+
+    
+      <div id="method-i-can_edit-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">can_edit?</span><span
+            class="method-args">(other)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="can_edit-3F-source">
+            <pre><span class="ruby-comment"># File app/models/person.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">can_edit?</span>(<span class="ruby-identifier">other</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">is_admin</span> <span class="ruby-operator">||</span> <span class="ruby-keyword">self</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- can_edit-3F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- can_edit-3F-method -->
+
+    
+      <div id="method-i-legal_to_sign_waiver-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">legal_to_sign_waiver?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="legal_to_sign_waiver-3F-source">
+            <pre><span class="ruby-comment"># File app/models/person.rb, line 35</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">legal_to_sign_waiver?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">date_of_birth</span>.<span class="ruby-identifier">present?</span>  <span class="ruby-comment"># assume &gt; 18 until known otherwise</span>
+  ((<span class="ruby-constant">Date</span>.<span class="ruby-identifier">today</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">date_of_birth</span>).<span class="ruby-identifier">days</span> <span class="ruby-operator">/</span> <span class="ruby-value">1</span>.<span class="ruby-identifier">year</span>) <span class="ruby-operator">&gt;=</span> <span class="ruby-value">18</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- legal_to_sign_waiver-3F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- legal_to_sign_waiver-3F-method -->
+
+    
+      <div id="method-i-phone-3D" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">phone=</span><span
+            class="method-args">(arg)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="phone-3D-source">
+            <pre><span class="ruby-comment"># File app/models/person.rb, line 9</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">phone=</span>(<span class="ruby-identifier">arg</span>)
+  <span class="ruby-identifier">write_attribute</span>(<span class="ruby-value">:phone</span>, <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/[^\d]/</span>){ <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> })
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- phone-3D-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- phone-3D-method -->
+
+    
+      <div id="method-i-signed_waiver-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">signed_waiver?</span><span
+            class="method-args">(game)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="signed_waiver-3F-source">
+            <pre><span class="ruby-comment"># File app/models/person.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">signed_waiver?</span>(<span class="ruby-identifier">game</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">waivers</span>.<span class="ruby-identifier">any?</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">w</span><span class="ruby-operator">|</span> <span class="ruby-identifier">w</span>.<span class="ruby-identifier">game_id</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">game</span>.<span class="ruby-identifier">id</span> }
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- signed_waiver-3F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- signed_waiver-3F-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

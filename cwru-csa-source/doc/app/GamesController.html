@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>class GamesController - Rails Application Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/controllers/games_controller.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="ApplicationController.html">ApplicationController</a>
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-admin_register_create">#admin_register_create</a>
+    
+    <li><a href="#method-i-admin_register_new">#admin_register_new</a>
+    
+    <li><a href="#method-i-create">#create</a>
+    
+    <li><a href="#method-i-edit">#edit</a>
+    
+    <li><a href="#method-i-emails">#emails</a>
+    
+    <li><a href="#method-i-index">#index</a>
+    
+    <li><a href="#method-i-new">#new</a>
+    
+    <li><a href="#method-i-rules">#rules</a>
+    
+    <li><a href="#method-i-show">#show</a>
+    
+    <li><a href="#method-i-tools">#tools</a>
+    
+    <li><a href="#method-i-update">#update</a>
+    
+    <li><a href="#method-i-update_current">#update_current</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Achievement.html">Achievement</a>
+  
+    <li><a href="./Achievement/AdminTakedown.html">Achievement::AdminTakedown</a>
+  
+    <li><a href="./Achievement/DoubleKill.html">Achievement::DoubleKill</a>
+  
+    <li><a href="./AchievementDoubleKill.html">AchievementDoubleKill</a>
+  
+    <li><a href="./AchievementManager.html">AchievementManager</a>
+  
+    <li><a href="./AchievementRegistry.html">AchievementRegistry</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./CalculatorController.html">CalculatorController</a>
+  
+    <li><a href="./ChatController.html">ChatController</a>
+  
+    <li><a href="./ContactMessage.html">ContactMessage</a>
+  
+    <li><a href="./ContactMessagesController.html">ContactMessagesController</a>
+  
+    <li><a href="./ContactMessagesHelper.html">ContactMessagesHelper</a>
+  
+    <li><a href="./ForumController.html">ForumController</a>
+  
+    <li><a href="./Game.html">Game</a>
+  
+    <li><a href="./GamesController.html">GamesController</a>
+  
+    <li><a href="./GamesHelper.html">GamesHelper</a>
+  
+    <li><a href="./IndexController.html">IndexController</a>
+  
+    <li><a href="./IndexHelper.html">IndexHelper</a>
+  
+    <li><a href="./Mission.html">Mission</a>
+  
+    <li><a href="./MissionsController.html">MissionsController</a>
+  
+    <li><a href="./MissionsHelper.html">MissionsHelper</a>
+  
+    <li><a href="./NotesController.html">NotesController</a>
+  
+    <li><a href="./PeopleController.html">PeopleController</a>
+  
+    <li><a href="./PeopleHelper.html">PeopleHelper</a>
+  
+    <li><a href="./Person.html">Person</a>
+  
+    <li><a href="./PracticeController.html">PracticeController</a>
+  
+    <li><a href="./Registration.html">Registration</a>
+  
+    <li><a href="./RegistrationsController.html">RegistrationsController</a>
+  
+    <li><a href="./RegistrationsHelper.html">RegistrationsHelper</a>
+  
+    <li><a href="./ReservationController.html">ReservationController</a>
+  
+    <li><a href="./SendNotification.html">SendNotification</a>
+  
+    <li><a href="./Squad.html">Squad</a>
+  
+    <li><a href="./SquadHelper.html">SquadHelper</a>
+  
+    <li><a href="./UpdateGameState.html">UpdateGameState</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class GamesController</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-admin_register_create" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">admin_register_create</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="admin_register_create-source">
+            <pre><span class="ruby-comment"># File app/controllers/games_controller.rb, line 83</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">admin_register_create</span>
+  <span class="ruby-ivar">@game</span> = <span class="ruby-constant">Game</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  <span class="ruby-ivar">@person</span> = <span class="ruby-constant">Person</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">:caseid</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:person</span>][<span class="ruby-value">:caseid</span>]).<span class="ruby-identifier">first_or_initialize</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@person</span>.<span class="ruby-identifier">persisted?</span>
+    <span class="ruby-ivar">@person</span>.<span class="ruby-identifier">update_attributes</span>(<span class="ruby-value">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:person</span>][<span class="ruby-value">:name</span>], <span class="ruby-value">:phone</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:person</span>][<span class="ruby-value">:phone</span>])
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">redirect_to</span>(<span class="ruby-identifier">admin_register_game_url</span>(<span class="ruby-ivar">@game</span>), <span class="ruby-value">:flash</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-value">:error</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;You need to input a name for the person.&#39;</span> }) <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@person</span>.<span class="ruby-identifier">name</span>.<span class="ruby-identifier">present?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">redirect_to</span>(<span class="ruby-identifier">admin_register_game_url</span>(<span class="ruby-ivar">@game</span>), <span class="ruby-value">:flash</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-value">:error</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;Could not create or find person! #{@person.errors.full_messages.first}&quot;</span> }) <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@person</span>.<span class="ruby-identifier">save</span>
+
+  <span class="ruby-ivar">@registration</span> = <span class="ruby-constant">Registration</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">:person_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@person</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">:game_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@game</span>.<span class="ruby-identifier">id</span>).<span class="ruby-identifier">first_or_initialize</span>(
+    <span class="ruby-value">:wants_oz</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:registration</span>][<span class="ruby-value">:wants_oz</span>],
+    <span class="ruby-value">:is_off_campus</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:registration</span>][<span class="ruby-value">:is_off_campus</span>],
+  )
+
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@registration</span>.<span class="ruby-identifier">persisted?</span>
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-string">&#39;User is already registered for this game!&#39;</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">admin_register_game_url</span>(<span class="ruby-ivar">@game</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@registration</span>.<span class="ruby-identifier">card_code</span> = <span class="ruby-constant">Registration</span>.<span class="ruby-identifier">make_code</span>
+    <span class="ruby-ivar">@registration</span>.<span class="ruby-identifier">score</span> = <span class="ruby-value">0</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@registration</span>.<span class="ruby-identifier">save</span>(<span class="ruby-value">:validate</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">false</span>)
+      <span class="ruby-ivar">@registration</span>.<span class="ruby-identifier">update_attribute</span>(<span class="ruby-value">:squad_id</span>, <span class="ruby-identifier">params</span>[<span class="ruby-value">:registration</span>][<span class="ruby-value">:squad_id</span>]) <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:registration</span>][<span class="ruby-value">:squad_id</span>].<span class="ruby-identifier">present?</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-string">&#39;Could not register due to an error!&#39;</span>
+      <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">admin_register_game_url</span>(<span class="ruby-ivar">@game</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- admin_register_create-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- admin_register_create-method -->
+
+    
+      <div id="method-i-admin_register_new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">admin_register_new</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="admin_register_new-source">
+            <pre><span class="ruby-comment"># File app/controllers/games_controller.rb, line 78</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">admin_register_new</span>
+  <span class="ruby-ivar">@game</span> = <span class="ruby-constant">Game</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  <span class="ruby-ivar">@squads</span> = <span class="ruby-ivar">@game</span>.<span class="ruby-identifier">squads</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- admin_register_new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- admin_register_new-method -->
+
+    
+      <div id="method-i-create" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">create</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="create-source">
+            <pre><span class="ruby-comment"># File app/controllers/games_controller.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
+  <span class="ruby-ivar">@game</span> = <span class="ruby-constant">Game</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:game</span>])
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Game</span>.<span class="ruby-identifier">current</span>.<span class="ruby-identifier">id</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-ivar">@game</span>.<span class="ruby-identifier">is_current</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@game</span>.<span class="ruby-identifier">save</span>()
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:index</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:message</span>] = <span class="ruby-ivar">@game</span>.<span class="ruby-identifier">errors</span>.<span class="ruby-identifier">full_messages</span>.<span class="ruby-identifier">first</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:new</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- create-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- create-method -->
+
+    
+      <div id="method-i-edit" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">edit</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="edit-source">
+            <pre><span class="ruby-comment"># File app/controllers/games_controller.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">edit</span>
+  <span class="ruby-ivar">@game</span> = <span class="ruby-constant">Game</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:game</span>].<span class="ruby-identifier">nil?</span>
+    <span class="ruby-ivar">@game</span> = <span class="ruby-constant">Game</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:game</span>])
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- edit-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- edit-method -->
+
+    
+      <div id="method-i-emails" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">emails</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="emails-source">
+            <pre><span class="ruby-comment"># File app/controllers/games_controller.rb, line 65</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">emails</span>
+  <span class="ruby-ivar">@game</span> = <span class="ruby-constant">Game</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  <span class="ruby-ivar">@registrations</span> = <span class="ruby-ivar">@game</span>.<span class="ruby-identifier">registrations</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:faction_id</span>].<span class="ruby-identifier">present?</span>
+    <span class="ruby-ivar">@registrations</span> = <span class="ruby-ivar">@registrations</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">faction_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:faction_id</span>])
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:human_type</span>].<span class="ruby-identifier">present?</span>
+    <span class="ruby-ivar">@registrations</span> = <span class="ruby-ivar">@registrations</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">human_type</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:human_type</span>])
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@registrations</span> = <span class="ruby-ivar">@registrations</span>.<span class="ruby-identifier">includes</span>(<span class="ruby-value">:person</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- emails-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- emails-method -->
+
+    
+      <div id="method-i-index" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">index</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="index-source">
+            <pre><span class="ruby-comment"># File app/controllers/games_controller.rb, line 7</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
+  <span class="ruby-ivar">@games</span> = <span class="ruby-constant">Game</span>.<span class="ruby-identifier">includes</span>(<span class="ruby-value">:registrations</span>).<span class="ruby-identifier">order</span>(<span class="ruby-value">:game_begins</span>).<span class="ruby-identifier">all</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- index-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- index-method -->
+
+    
+      <div id="method-i-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File app/controllers/games_controller.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@game</span> = <span class="ruby-constant">Game</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+      <div id="method-i-rules" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">rules</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="rules-source">
+            <pre><span class="ruby-comment"># File app/controllers/games_controller.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">rules</span>
+  <span class="ruby-ivar">@game</span> = <span class="ruby-constant">Game</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>]) <span class="ruby-operator">||</span> <span class="ruby-ivar">@current_game</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- rules-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- rules-method -->
+
+    
+      <div id="method-i-show" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">show</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="show-source">
+            <pre><span class="ruby-comment"># File app/controllers/games_controller.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">show</span>
+  <span class="ruby-ivar">@game</span> = <span class="ruby-constant">Game</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>]).<span class="ruby-identifier">first</span>
+
+  <span class="ruby-comment"># Don&#39;t send new HTML if the content is cached on the client:</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">stale?</span>(<span class="ruby-ivar">@game</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-constant">Rails</span>.<span class="ruby-identifier">env</span>.<span class="ruby-identifier">development?</span>
+
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- show-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- show-method -->
+
+    
+      <div id="method-i-tools" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">tools</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="tools-source">
+            <pre><span class="ruby-comment"># File app/controllers/games_controller.rb, line 114</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">tools</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- tools-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- tools-method -->
+
+    
+      <div id="method-i-update" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">update</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="update-source">
+            <pre><span class="ruby-comment"># File app/controllers/games_controller.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">update</span>
+  <span class="ruby-ivar">@game</span> = <span class="ruby-constant">Game</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@game</span>.<span class="ruby-identifier">update_attributes</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:game</span>])
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:edit</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-ivar">@game</span>.<span class="ruby-identifier">errors</span>.<span class="ruby-identifier">full_messages</span>.<span class="ruby-identifier">first</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:edit</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- update-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- update-method -->
+
+    
+      <div id="method-i-update_current" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">update_current</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="update_current-source">
+            <pre><span class="ruby-comment"># File app/controllers/games_controller.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">update_current</span>
+  <span class="ruby-ivar">@game</span> = <span class="ruby-constant">Game</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:active_game</span>])
+  <span class="ruby-ivar">@game</span>.<span class="ruby-identifier">set_current</span>
+
+  <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">games_url</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- update_current-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- update_current-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

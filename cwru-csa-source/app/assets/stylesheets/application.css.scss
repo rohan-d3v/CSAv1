@@ -1,5 +1,3 @@
-
-//= require jquery.countdown
 @import "partials/base";
 @import "compass";
 @import "_blueprint";
@@ -14,7 +12,7 @@ html, body {
 }
 
 .container {
-  background-color: #fff;
+  background-color: #FFF;
 }
 
 h1 {
@@ -25,13 +23,20 @@ h2 {
   font-size: 2em;
 }
 
+.logo {
+  z-index: 1;
+  position: -32px 0px;
+}
+
 .heading {
-  background: image-url("logo_small.png") no-repeat -32px 0px;
   margin: 20px auto 0px;
   text-align: center;
-.bar{
-margin: 400px;
-}
+  .bar{
+	margin: 400px;
+  }
+  .logo{
+   float: left;
+       }
   .navigation {
     background-color: #FFF;
     clear: both;
@@ -94,7 +99,7 @@ margin: 400px;
   text-align:center;
   padding:5px 0px;
   color: black;
-   background-color: #87cefa;
+   background-color: grey;
    a { color: #666; }
 }
 
@@ -112,8 +117,8 @@ div.game-header div {
 }
 
 @font-face {
-  font-family:'Dink';
-  src: url('/fonts/DINk.ttf') format('truetype')
+  font-family:'Lato';
+  src: url('/fonts/Lato-Regular.ttf') format('truetype')
 }
 
 th.admin {
@@ -154,4 +159,3 @@ table.gamelist {
 textarea {
   max-width: 390px;
 }
-

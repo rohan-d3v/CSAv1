@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>module AchievementRegistry - Rails Application Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="module">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/achievement_manager.rb
+    <li>lib/achievement_registry.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-c-handle_player_tagged">::handle_player_tagged</a>
+    
+    <li><a href="#method-c-included">::included</a>
+    
+    <li><a href="#method-c-trigger">::trigger</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Achievement.html">Achievement</a>
+  
+    <li><a href="./Achievement/AdminTakedown.html">Achievement::AdminTakedown</a>
+  
+    <li><a href="./Achievement/DoubleKill.html">Achievement::DoubleKill</a>
+  
+    <li><a href="./AchievementDoubleKill.html">AchievementDoubleKill</a>
+  
+    <li><a href="./AchievementManager.html">AchievementManager</a>
+  
+    <li><a href="./AchievementRegistry.html">AchievementRegistry</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./CalculatorController.html">CalculatorController</a>
+  
+    <li><a href="./ChatController.html">ChatController</a>
+  
+    <li><a href="./ContactMessage.html">ContactMessage</a>
+  
+    <li><a href="./ContactMessagesController.html">ContactMessagesController</a>
+  
+    <li><a href="./ContactMessagesHelper.html">ContactMessagesHelper</a>
+  
+    <li><a href="./ForumController.html">ForumController</a>
+  
+    <li><a href="./Game.html">Game</a>
+  
+    <li><a href="./GamesController.html">GamesController</a>
+  
+    <li><a href="./GamesHelper.html">GamesHelper</a>
+  
+    <li><a href="./IndexController.html">IndexController</a>
+  
+    <li><a href="./IndexHelper.html">IndexHelper</a>
+  
+    <li><a href="./Mission.html">Mission</a>
+  
+    <li><a href="./MissionsController.html">MissionsController</a>
+  
+    <li><a href="./MissionsHelper.html">MissionsHelper</a>
+  
+    <li><a href="./NotesController.html">NotesController</a>
+  
+    <li><a href="./PeopleController.html">PeopleController</a>
+  
+    <li><a href="./PeopleHelper.html">PeopleHelper</a>
+  
+    <li><a href="./Person.html">Person</a>
+  
+    <li><a href="./PracticeController.html">PracticeController</a>
+  
+    <li><a href="./Registration.html">Registration</a>
+  
+    <li><a href="./RegistrationsController.html">RegistrationsController</a>
+  
+    <li><a href="./RegistrationsHelper.html">RegistrationsHelper</a>
+  
+    <li><a href="./ReservationController.html">ReservationController</a>
+  
+    <li><a href="./SendNotification.html">SendNotification</a>
+  
+    <li><a href="./Squad.html">Squad</a>
+  
+    <li><a href="./SquadHelper.html">SquadHelper</a>
+  
+    <li><a href="./UpdateGameState.html">UpdateGameState</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="module">module AchievementRegistry</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-handle_player_tagged" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">handle_player_tagged</span><span
+            class="method-args">(options)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>PubSubHub events:</p>
+          
+
+          
+          <div class="method-source-code" id="handle_player_tagged-source">
+            <pre><span class="ruby-comment"># File lib/achievement_registry.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">handle_player_tagged</span>(<span class="ruby-identifier">options</span>)
+  <span class="ruby-constant">AchievementRegistry</span>.<span class="ruby-identifier">trigger</span>(<span class="ruby-value">:player_tagged</span>, <span class="ruby-identifier">options</span>[<span class="ruby-value">:tag</span>])
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- handle_player_tagged-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- handle_player_tagged-method -->
+
+    
+      <div id="method-c-included" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">included</span><span
+            class="method-args">(base)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="included-source">
+            <pre><span class="ruby-comment"># File lib/achievement_manager.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">included</span>(<span class="ruby-identifier">base</span>)
+  <span class="ruby-ivar">@achievements</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">base</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- included-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- included-method -->
+
+    
+      <div id="method-c-trigger" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">trigger</span><span
+            class="method-args">(event, *args)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="trigger-source">
+            <pre><span class="ruby-comment"># File lib/achievement_manager.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">trigger</span>(<span class="ruby-identifier">event</span>, *<span class="ruby-identifier">args</span>)
+  <span class="ruby-ivar">@achievements</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">a</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;on_#{event}&quot;</span>, *<span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- trigger-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- trigger-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

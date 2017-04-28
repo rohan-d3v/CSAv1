@@ -41,7 +41,7 @@ class ApplicationController < ActionController::Base
   def check_is_registered
     @logged_in_registration = Registration.where(person_id: @logged_in_person, game_id: @current_game).first
     if @logged_in_registration.nil?
-      flash[:error] = "You must register for the game before you can view this page."
+      flash[:error] = "You must register for the Course before you can view this page."
       redirect_to root_url
     end
   end
@@ -49,15 +49,15 @@ class ApplicationController < ActionController::Base
   def require_can_register
     if !@current_game.can_register?
       if @current_game.registration_begins.blank? || @current_game.registration_ends.blank?
-        flash[:error] = 'Registration times for this game have not yet been configured'
+        flash[:error] = 'Time for this course has not yet been configured'
       end
 
       if @current_game.now < @current_game.registration_begins
-        flash[:error] = "Registration begins #{@current_game.to_s(:registration_begins)}. Please check back then!"
+        flash[:error] = "Course begins #{@current_game.to_s(:registration_begins)}. Please check back then!"
       end
 
       if @current_game.now > @current_game.registration_ends
-        flash[:error] = "Registration ended #{@current_game.to_s(:registration_ends)}. If you would still like to play, please contact the administrators."
+        flash[:error] = "Drop/Add ended #{@current_game.to_s(:registration_ends)}. If you would still like to register, please contact the faculty."
       end
 
       return redirect_to root_url

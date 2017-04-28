@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>class Game - Rails Application Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/models/game.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">ActiveRecord::Base
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-c-current">::current</a>
+    
+    <li><a href="#method-c-now">::now</a>
+    
+    <li><a href="#method-i-can_register-3F">#can_register?</a>
+    
+    <li><a href="#method-i-graph_data">#graph_data</a>
+    
+    <li><a href="#method-i-has_begun-3F">#has_begun?</a>
+    
+    <li><a href="#method-i-has_ended-3F">#has_ended?</a>
+    
+    <li><a href="#method-i-hours_to_starve">#hours_to_starve</a>
+    
+    <li><a href="#method-i-now">#now</a>
+    
+    <li><a href="#method-i-ongoing-3F">#ongoing?</a>
+    
+    <li><a href="#method-i-original_zombies">#original_zombies</a>
+    
+    <li><a href="#method-i-ozs_revealed-3F">#ozs_revealed?</a>
+    
+    <li><a href="#method-i-set_current">#set_current</a>
+    
+    <li><a href="#method-i-since_begin">#since_begin</a>
+    
+    <li><a href="#method-i-to_s">#to_s</a>
+    
+    <li><a href="#method-i-utc_offset">#utc_offset</a>
+    
+    <li><a href="#method-i-zombietree_json">#zombietree_json</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Achievement.html">Achievement</a>
+  
+    <li><a href="./Achievement/AdminTakedown.html">Achievement::AdminTakedown</a>
+  
+    <li><a href="./Achievement/DoubleKill.html">Achievement::DoubleKill</a>
+  
+    <li><a href="./AchievementDoubleKill.html">AchievementDoubleKill</a>
+  
+    <li><a href="./AchievementManager.html">AchievementManager</a>
+  
+    <li><a href="./AchievementRegistry.html">AchievementRegistry</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./CalculatorController.html">CalculatorController</a>
+  
+    <li><a href="./ChatController.html">ChatController</a>
+  
+    <li><a href="./ContactMessage.html">ContactMessage</a>
+  
+    <li><a href="./ContactMessagesController.html">ContactMessagesController</a>
+  
+    <li><a href="./ContactMessagesHelper.html">ContactMessagesHelper</a>
+  
+    <li><a href="./ForumController.html">ForumController</a>
+  
+    <li><a href="./Game.html">Game</a>
+  
+    <li><a href="./GamesController.html">GamesController</a>
+  
+    <li><a href="./GamesHelper.html">GamesHelper</a>
+  
+    <li><a href="./IndexController.html">IndexController</a>
+  
+    <li><a href="./IndexHelper.html">IndexHelper</a>
+  
+    <li><a href="./Mission.html">Mission</a>
+  
+    <li><a href="./MissionsController.html">MissionsController</a>
+  
+    <li><a href="./MissionsHelper.html">MissionsHelper</a>
+  
+    <li><a href="./NotesController.html">NotesController</a>
+  
+    <li><a href="./PeopleController.html">PeopleController</a>
+  
+    <li><a href="./PeopleHelper.html">PeopleHelper</a>
+  
+    <li><a href="./Person.html">Person</a>
+  
+    <li><a href="./PracticeController.html">PracticeController</a>
+  
+    <li><a href="./Registration.html">Registration</a>
+  
+    <li><a href="./RegistrationsController.html">RegistrationsController</a>
+  
+    <li><a href="./RegistrationsHelper.html">RegistrationsHelper</a>
+  
+    <li><a href="./ReservationController.html">ReservationController</a>
+  
+    <li><a href="./SendNotification.html">SendNotification</a>
+  
+    <li><a href="./Squad.html">Squad</a>
+  
+    <li><a href="./SquadHelper.html">SquadHelper</a>
+  
+    <li><a href="./UpdateGameState.html">UpdateGameState</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Game</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-current" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">current</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="current-source">
+            <pre><span class="ruby-comment"># File app/models/game.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">current</span>
+  <span class="ruby-constant">Game</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">is_current</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>).<span class="ruby-identifier">first</span> <span class="ruby-keyword">or</span> <span class="ruby-constant">Game</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- current-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- current-method -->
+
+    
+      <div id="method-c-now" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">now</span><span
+            class="method-args">(game)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="now-source">
+            <pre><span class="ruby-comment"># File app/models/game.rb, line 84</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">now</span>(<span class="ruby-identifier">game</span>)
+  <span class="ruby-identifier">game</span>.<span class="ruby-identifier">now</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- now-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- now-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-can_register-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">can_register?</span><span
+            class="method-args">(person = nil)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="can_register-3F-source">
+            <pre><span class="ruby-comment"># File app/models/game.rb, line 72</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">can_register?</span>(<span class="ruby-identifier">person</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">persisted?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">registration_begins</span>.<span class="ruby-identifier">present?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">registration_ends</span>.<span class="ruby-identifier">present?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">person</span>.<span class="ruby-identifier">try</span>(<span class="ruby-value">:is_admin</span>)
+
+  <span class="ruby-identifier">registration_begins</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">now</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">registration_ends</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">now</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- can_register-3F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- can_register-3F-method -->
+
+    
+      <div id="method-i-graph_data" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">graph_data</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="graph_data-source">
+            <pre><span class="ruby-comment"># File app/models/game.rb, line 99</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">graph_data</span>
+  <span class="ruby-identifier">states</span> = <span class="ruby-identifier">registrations</span>.<span class="ruby-identifier">includes</span>([<span class="ruby-value">:game</span>, <span class="ruby-value">:taggedby</span>, <span class="ruby-value">:tagged</span>, <span class="ruby-value">:feeds</span>]).<span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">state_history</span> }
+  <span class="ruby-identifier">tslength</span> = ((<span class="ruby-identifier">game_ends</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">game_begins</span>) <span class="ruby-operator">/</span> <span class="ruby-value">240</span>).<span class="ruby-identifier">floor</span>
+  <span class="ruby-ivar">@data</span> = {}
+  <span class="ruby-value">240</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">dt</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">now</span> = <span class="ruby-identifier">game_begins</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">dt</span>.<span class="ruby-identifier">seconds</span>.<span class="ruby-identifier">to_i</span>*<span class="ruby-identifier">tslength</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">now</span> <span class="ruby-operator">&gt;=</span> (<span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span> <span class="ruby-operator">+</span> <span class="ruby-value">48</span>.<span class="ruby-identifier">hours</span>)
+      <span class="ruby-keyword">break</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-ivar">@data</span>[<span class="ruby-identifier">now</span>] = {<span class="ruby-value">:zombies</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-value">:deceased</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-value">:humans=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>}
+    <span class="ruby-identifier">states</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span>
+      <span class="ruby-comment"># States is a hash of important times of players. Like</span>
+      <span class="ruby-comment"># state = {:human =&gt; [time became human], :zombie =&gt; [time zombified],</span>
+      <span class="ruby-comment">#          :deceased =&gt; [time of death]}</span>
+      <span class="ruby-comment"># So, determining who is at which state is now pretty easy.</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">s</span>[<span class="ruby-value">:human</span>] <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">now</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">s</span>[<span class="ruby-value">:zombie</span>] <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">now</span>
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">s</span>[<span class="ruby-value">:deceased</span>] <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">now</span>
+            <span class="ruby-ivar">@data</span>[<span class="ruby-identifier">now</span>][<span class="ruby-value">:deceased</span>] <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+            <span class="ruby-keyword">next</span>
+          <span class="ruby-keyword">end</span>
+          <span class="ruby-ivar">@data</span>[<span class="ruby-identifier">now</span>][<span class="ruby-value">:zombies</span>] <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+          <span class="ruby-keyword">next</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-ivar">@data</span>[<span class="ruby-identifier">now</span>][<span class="ruby-value">:humans</span>] <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@data</span> = <span class="ruby-ivar">@data</span>.<span class="ruby-identifier">sort</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span><span class="ruby-operator">|</span>
+    [
+      (<span class="ruby-identifier">x</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">game_begins</span>) <span class="ruby-operator">/</span> <span class="ruby-value">1</span>.<span class="ruby-identifier">hour</span>,
+      <span class="ruby-identifier">y</span>[<span class="ruby-value">:humans</span>],
+      <span class="ruby-comment"># Certainty of the Human points:</span>
+      <span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>,
+      <span class="ruby-identifier">y</span>[<span class="ruby-value">:zombies</span>],
+      <span class="ruby-comment"># Certainty of the Zombie points:</span>
+      <span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>,
+      <span class="ruby-identifier">y</span>[<span class="ruby-value">:deceased</span>],
+      <span class="ruby-comment"># Certainty of the Deceased points:</span>
+      <span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>,
+    ]
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- graph_data-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- graph_data-method -->
+
+    
+      <div id="method-i-has_begun-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">has_begun?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="has_begun-3F-source">
+            <pre><span class="ruby-comment"># File app/models/game.rb, line 56</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">has_begun?</span>
+  <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">game_begins</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- has_begun-3F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- has_begun-3F-method -->
+
+    
+      <div id="method-i-has_ended-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">has_ended?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="has_ended-3F-source">
+            <pre><span class="ruby-comment"># File app/models/game.rb, line 60</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">has_ended?</span>
+  <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">game_ends</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- has_ended-3F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- has_ended-3F-method -->
+
+    
+      <div id="method-i-hours_to_starve" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">hours_to_starve</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="hours_to_starve-source">
+            <pre><span class="ruby-comment"># File app/models/game.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">hours_to_starve</span>
+  <span class="ruby-value">48</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- hours_to_starve-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- hours_to_starve-method -->
+
+    
+      <div id="method-i-now" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">now</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="now-source">
+            <pre><span class="ruby-comment"># File app/models/game.rb, line 80</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">now</span>
+  [<span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>, <span class="ruby-identifier">game_ends</span>].<span class="ruby-identifier">min</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- now-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- now-method -->
+
+    
+      <div id="method-i-ongoing-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">ongoing?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="ongoing-3F-source">
+            <pre><span class="ruby-comment"># File app/models/game.rb, line 50</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ongoing?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">game_begins</span>.<span class="ruby-identifier">present?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">game_ends</span>.<span class="ruby-identifier">present?</span>
+
+  <span class="ruby-identifier">has_begun?</span> <span class="ruby-keyword">and</span> <span class="ruby-operator">!</span><span class="ruby-identifier">has_ended?</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- ongoing-3F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- ongoing-3F-method -->
+
+    
+      <div id="method-i-original_zombies" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">original_zombies</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="original_zombies-source">
+            <pre><span class="ruby-comment"># File app/models/game.rb, line 64</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">original_zombies</span>
+  <span class="ruby-identifier">registrations</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">is_oz</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- original_zombies-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- original_zombies-method -->
+
+    
+      <div id="method-i-ozs_revealed-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">ozs_revealed?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="ozs_revealed-3F-source">
+            <pre><span class="ruby-comment"># File app/models/game.rb, line 68</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ozs_revealed?</span>
+  <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">oz_reveal</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- ozs_revealed-3F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- ozs_revealed-3F-method -->
+
+    
+      <div id="method-i-set_current" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">set_current</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="set_current-source">
+            <pre><span class="ruby-comment"># File app/models/game.rb, line 143</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">set_current</span>
+ <span class="ruby-keyword">if</span> <span class="ruby-identifier">update_attribute</span>(<span class="ruby-value">:is_current</span>, <span class="ruby-keyword">true</span>)
+   <span class="ruby-constant">Game</span>.<span class="ruby-identifier">where</span>(<span class="ruby-string">&#39;is_current = ? AND id &lt;&gt; ?&#39;</span>, <span class="ruby-keyword">true</span>, <span class="ruby-identifier">id</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">g</span><span class="ruby-operator">|</span>
+     <span class="ruby-identifier">g</span>.<span class="ruby-identifier">update_attribute</span>(<span class="ruby-value">:is_current</span>, <span class="ruby-keyword">false</span>)
+   <span class="ruby-keyword">end</span>
+ <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- set_current-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- set_current-method -->
+
+    
+      <div id="method-i-since_begin" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">since_begin</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="since_begin-source">
+            <pre><span class="ruby-comment"># File app/models/game.rb, line 88</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">since_begin</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-value">0</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">has_begun?</span>
+  <span class="ruby-constant">Game</span>.<span class="ruby-identifier">now</span>(<span class="ruby-keyword">self</span>) <span class="ruby-operator">-</span> <span class="ruby-identifier">game_begins</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- since_begin-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- since_begin-method -->
+
+    
+      <div id="method-i-to_s" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">to_s</span><span
+            class="method-args">(type=nil)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="to_s-source">
+            <pre><span class="ruby-comment"># File app/models/game.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_s</span>(<span class="ruby-identifier">type</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">datetimeformat</span> = <span class="ruby-string">&#39;%A, %B %e, %Y @ %I:%M %p&#39;</span>
+
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">type</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:date_range</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">game_ends</span>.<span class="ruby-identifier">month</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">game_begins</span>.<span class="ruby-identifier">month</span>
+      <span class="ruby-identifier">game_begins</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-string">&#39;%B %e&#39;</span>) <span class="ruby-operator">+</span> <span class="ruby-string">&#39; - &#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">game_ends</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-string">&#39;%e&#39;</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">game_begins</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-string">&quot;%B %e&quot;</span>) <span class="ruby-operator">+</span> <span class="ruby-string">&#39; - &#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">game_ends</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-string">&#39;%B %e&#39;</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:registration_begins</span>
+    <span class="ruby-identifier">registration_begins</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-identifier">datetimeformat</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:registration_ends</span>
+    <span class="ruby-identifier">registration_ends</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-identifier">datetimeformat</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:oz_reveal</span>
+    <span class="ruby-identifier">oz_reveal</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-identifier">datetimeformat</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:game_begins</span>
+    <span class="ruby-identifier">game_begins</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-identifier">datetimeformat</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:game_ends</span>
+    <span class="ruby-identifier">game_ends</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-identifier">datetimeformat</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">super</span>()
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- to_s-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- to_s-method -->
+
+    
+      <div id="method-i-utc_offset" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">utc_offset</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="utc_offset-source">
+            <pre><span class="ruby-comment"># File app/models/game.rb, line 93</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">utc_offset</span>
+  <span class="ruby-identifier">dst_off</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">dst_off</span> = <span class="ruby-value">1</span>.<span class="ruby-identifier">hour</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">dst?</span>
+  <span class="ruby-constant">ActiveSupport</span><span class="ruby-operator">::</span><span class="ruby-constant">TimeZone</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">time_zone</span>).<span class="ruby-identifier">utc_offset</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">dst_off</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- utc_offset-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- utc_offset-method -->
+
+    
+      <div id="method-i-zombietree_json" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">zombietree_json</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="zombietree_json-source">
+            <pre><span class="ruby-comment"># File app/models/game.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">zombietree_json</span>
+  { <span class="ruby-identifier">id</span><span class="ruby-operator">:</span> <span class="ruby-node">&quot;game#{id}&quot;</span>, <span class="ruby-identifier">name</span><span class="ruby-operator">:</span> <span class="ruby-identifier">short_name</span>, <span class="ruby-identifier">data</span><span class="ruby-operator">:</span> {},
+    <span class="ruby-identifier">children</span><span class="ruby-operator">:</span> <span class="ruby-identifier">registrations</span>(<span class="ruby-identifier">include</span><span class="ruby-operator">:</span> [<span class="ruby-value">:tagged</span>, <span class="ruby-value">:person</span>]).<span class="ruby-identifier">select</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-operator">!</span><span class="ruby-identifier">x</span>.<span class="ruby-identifier">is_human?</span> <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">x</span>.<span class="ruby-identifier">killing_tag</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">killing_tag</span>.<span class="ruby-identifier">tagger</span>.<span class="ruby-identifier">nil?</span>)}.<span class="ruby-identifier">map</span>(&amp;<span class="ruby-value">:zombietree</span>)
+  }.<span class="ruby-identifier">to_json</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- zombietree_json-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- zombietree_json-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
