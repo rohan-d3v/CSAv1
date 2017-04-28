@@ -6,7 +6,7 @@ Thank you to Aaron Neyer for help with understanding rails database backend Impl
 He was my senior and I have worked with him in the past to implement rails front end applications
 
 UI, Calculator, Notes: Elizabeth 
-Backend, Webchat, admin features, login/user access: Rohan
+Backend, admin features, login/user access, Webchat: Rohan
 Forum: Sasha
 Amazon Alexa App: Ashley
 
